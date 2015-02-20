@@ -36,8 +36,6 @@ module.exports = (robot) ->
               when 0.81 < score < 1.0 then "Extremely happy" 
 
             sendFeelings(user, feeling)
-
-
             
     for user in allUsers
       user.entries.map (entry) ->
