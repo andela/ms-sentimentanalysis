@@ -19,7 +19,7 @@ rootRef = new Firebase 'https://sentiment-ms.firebaseio.com/'
 orgRef = rootRef.child 'organizations'
 
 sad =["felt sad", "felt blue", "felt cheerless", "felt dejected", "felt depressed", "felt disconsolate", "felt down", "felt glum", "felt low", "was low-spirited", "felt lugubrious", "felt melancholy", "was somber", "felt unhappy", "felt wistful", "felt woebegone", "felt bad"]
-neutral = ["felt neutral", "felt impartial", "felt indifferent", "felt cool", "felt calm", "felt uninvolved", "was unprejudiced"]
+neutral = ["felt neutral", "felt indifferent", "felt cool", "felt calm"]
 happy = ["felt happy", "felt lively", "felt blithe", "felt jubilant", "felt blessed", "felt blissful", "felt delighted", "felt joyful"]
 ex_happy = ["felt extremely happy", "felt overjoyed", "was over the moon", "was on cloud nine"]
 
