@@ -58,10 +58,10 @@ makeRequest = (text, msg) ->
         type = response.docSentiment.type
 
         feeling = switch
-          when -1.0 < score < -0.8 then "#{msg.random sad}"
-          when -0.81 < score < -0.1 then "#{msg.random sad}"
-          when -0.11 < score < 0.1 then "#{msg.random neutral}"
-          when 0.11 < score < 0.8 then "#{msg.random happy}"
-          when 0.81 < score < 1.0 then "#{msg.random ex_happy}" 
+          when -1.0 < score < -0.8 || type is 'negative' then "#{msg.random sad}"
+          when -0.81 < score < -0.1 || type is 'negative' then "#{msg.random sad}"
+          when -0.11 < score < 0.1 || type is 'neutral' then "#{msg.random neutral}"
+          when 0.11 < score < 0.8 || type is 'positive' then "#{msg.random happy}"
+          when 0.81 < score < 1.0 || type is 'positive' then "#{msg.random ex_happy}" 
 
         sendFeelings feeling, msg
